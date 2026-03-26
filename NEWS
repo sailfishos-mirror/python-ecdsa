@@ -1,3 +1,15 @@
+* Release 0.19.2 (26 Mar 2026)
+
+Bug fixes:
+* Fix CVE-2026-33936, a DER parsing issue in ``remove_octet_string()``,
+  ``remove_constructed()``, and ``remove_implitic()`` where a truncated buffer
+  wasn't detected. This can lead to high level functions, like
+  ``SigningKey.from_der()`` to raise unexpected exceptions.
+  (Mohamed Abdelaal (0xmrma))
+
+Maintenance:
+* Update CI to use newer version of Ubuntu.
+
 * Release 0.19.1 (13 Mar 2025)
 
 New API:
